@@ -8,85 +8,92 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #1a237e, #6a1b9a, #283593);
-      background-attachment: fixed;
-      color: white;
+      background: linear-gradient(135deg, #f5f7fa, #e9ecef);
+      color: #333;
       scroll-behavior: smooth;
     }
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px;
-      background: rgba(0,0,50,0.6);
+      padding: 20px 40px;
+      background: #fff;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-      backdrop-filter: blur(6px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
     header h1 {
       margin: 0;
       font-size: 1.6rem;
       font-weight: 600;
-      letter-spacing: 1px;
-      color: #ffeb3b;
+      background: linear-gradient(135deg, #00bcd4, #673ab7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     nav a {
       margin: 0 15px;
       text-decoration: none;
-      color: white;
+      color: #333;
       font-weight: 500;
-      transition: 0.3s;
+      transition: color 0.3s;
     }
     nav a:hover {
-      color: #ff4081;
+      color: #673ab7;
     }
     section {
       padding: 80px 20px;
       text-align: center;
     }
     .card {
-      background: rgba(255,255,255,0.1);
+      background: #fff;
       margin: 20px auto;
-      padding: 30px;
+      padding: 40px;
       border-radius: 20px;
       max-width: 850px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
       transition: transform 0.3s, box-shadow 0.3s;
     }
     .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
     }
     .profile-pic {
       width: 160px;
       height: 160px;
       border-radius: 50%;
       object-fit: cover;
-      border: 5px solid #ffeb3b;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+      border: 5px solid #fff;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
       margin-bottom: 20px;
     }
     h2 {
       font-size: 1.8rem;
-      color: #ffeb3b;
+      background: linear-gradient(135deg, #00bcd4, #673ab7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       margin-bottom: 15px;
     }
     p {
       font-size: 1rem;
       line-height: 1.6;
+      color: #555;
     }
     footer {
       text-align: center;
       padding: 20px;
-      background: rgba(0,0,50,0.8);
-      box-shadow: 0 -4px 10px rgba(0,0,0,0.5);
+      background: #fff;
+      box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+    }
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #666;
     }
     footer a {
-      color: #ffeb3b;
+      color: #673ab7;
       text-decoration: none;
+      font-weight: 500;
     }
   </style>
 </head>
@@ -100,18 +107,18 @@
       <a href="#contact">Contact</a>
     </nav>
   </header>  <section id="home">
-    <div class="card" style="background: linear-gradient(135deg,#2196f3,#3f51b5);">
+    <div class="card">
       <img src="your-photo.jpg" alt="Profile Photo" class="profile-pic">
       <h2>Welcome to My Portfolio</h2>
       <p>CSE B.Tech 3rd Year | 2025</p>
     </div>
   </section>  <section id="about">
-    <div class="card" style="background: linear-gradient(135deg,#9c27b0,#673ab7);">
+    <div class="card">
       <h2>About Me</h2>
       <p>Hello! I am Madduru Siddartha, a Computer Science Engineering student passionate about technology, coding, and building innovative projects. I enjoy solving problems and exploring new tech stacks.</p>
     </div>
   </section>  <section id="skills">
-    <div class="card" style="background: linear-gradient(135deg,#00bcd4,#2196f3);">
+    <div class="card">
       <h2>Skills</h2>
       <p>🔹 C, C++<br>
          🔹 Python<br>
@@ -119,14 +126,14 @@
          🔹 Problem Solving & DSA</p>
     </div>
   </section>  <section id="projects">
-    <div class="card" style="background: linear-gradient(135deg,#ff5722,#e91e63);">
+    <div class="card">
       <h2>Projects</h2>
       <p>🚀 Project 1 – (Add Details Here)<br>
          🚀 Project 2 – (Add Details Here)<br>
          🚀 Project 3 – (Add Details Here)</p>
     </div>
   </section>  <section id="contact">
-    <div class="card" style="background: linear-gradient(135deg,#4caf50,#8bc34a);">
+    <div class="card">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:maddurusiddartha@gmail.com">maddurusiddartha@gmail.com</a></p>
       <p>GitHub: <a href="https://github.com/maddurusiddartha" target="_blank">github.com/maddurusiddartha</a></p>
