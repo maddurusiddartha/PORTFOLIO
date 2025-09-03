@@ -31,8 +31,11 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+    nav {
+      display: flex;
+      gap: 15px;
+    }
     nav a {
-      margin: 0 15px;
       text-decoration: none;
       color: #333;
       font-weight: 500;
@@ -41,83 +44,131 @@
     nav a:hover {
       color: #673ab7;
     }
-    section {
-      padding: 80px 20px;
-      text-align: center;
-    }
-    .card {
-      background: #fff;
-      margin: 20px auto;
-      padding: 40px;
-      border-radius: 20px;
-      max-width: 850px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-    }
-    .profile-pic {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid #fff;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-      margin-bottom: 20px;
-    }
-    h2 {
-      font-size: 1.8rem;
-      background: linear-gradient(135deg, #00bcd4, #673ab7);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 15px;
-    }
-    p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #555;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 25px;
-      font-size: 1rem;
-      font-weight: 500;
-      color: #fff;
-      background: linear-gradient(135deg, #00bcd4, #673ab7);
-      border: none;
-      border-radius: 30px;
+    /* Hamburger button */
+    .hamburger {
+      display: none;
+      flex-direction: column;
       cursor: pointer;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      text-decoration: none;
+      gap: 5px;
     }
-    .btn:hover {
-      transform: translateY(-4px) scale(1.05);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: #333;
+      border-radius: 5px;
     }
-    .btn:active {
-      transform: translateY(2px) scale(0.98);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
+    /* Slide menu */
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      height: 100%;
+      width: 250px;
       background: #fff;
-      box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+      box-shadow: -4px 0 10px rgba(0,0,0,0.1);
+      transition: right 0.3s ease;
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
-    footer p {
-      margin: 0;
-      font-size: 0.9rem;
-      color: #666;
-    }
-    footer a {
-      color: #673ab7;
+    .side-menu a {
       text-decoration: none;
+      color: #333;
+      font-size: 1.2rem;
       font-weight: 500;
     }
+    .side-menu a:hover {
+      color: #673ab7;
+    }
+    .side-menu.active {
+      right: 0;
+    }
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      .hamburger {
+        display: flex;
+      }
+    }section {
+  padding: 80px 20px;
+  text-align: center;
+}
+.card {
+  background: #fff;
+  margin: 20px auto;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 850px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fff;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+h2 {
+  font-size: 1.8rem;
+  background: linear-gradient(135deg, #00bcd4, #673ab7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
+}
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background: linear-gradient(135deg, #00bcd4, #673ab7);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+}
+.btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+.btn:active {
+  transform: translateY(2px) scale(0.98);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+}
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+footer a {
+  color: #673ab7;
+  text-decoration: none;
+  font-weight: 500;
+}
+
   </style>
 </head>
 <body>  <header>
@@ -129,7 +180,18 @@
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>  <section id="home">
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>  <div class="side-menu" id="sideMenu">
+    <a href="#home" onclick="toggleMenu()">Home</a>
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#skills" onclick="toggleMenu()">Skills</a>
+    <a href="#projects" onclick="toggleMenu()">Projects</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+  </div>  <section id="home">
     <div class="card">
       <img src="your-photo.jpg" alt="Profile Photo" class="profile-pic">
       <h2>Welcome to My Portfolio</h2>
@@ -164,5 +226,9 @@
     </div>
   </section>  <footer>
     <p>© 2025 Madduru Siddartha | All Rights Reserved</p>
-  </footer></body>
+  </footer>  <script>
+    function toggleMenu() {
+      document.getElementById('sideMenu').classList.toggle('active');
+    }
+  </script></body>
 </html>
