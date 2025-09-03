@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Madduru Siddartha - Portfolio</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       font-family: "Poppins", sans-serif;
@@ -165,9 +168,17 @@
   <script>
     const toggle = document.querySelector('.menu-toggle');
     const sideMenu = document.getElementById('sideMenu');
+    const links = sideMenu.querySelectorAll('a');
 
     toggle.addEventListener('click', () => {
       sideMenu.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        sideMenu.classList.remove('active');
+      });
     });
   </script>
 </body>
