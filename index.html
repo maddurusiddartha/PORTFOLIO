@@ -3,12 +3,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Madduru Siddartha | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0d47a1, #1976d2);
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1a237e, #6a1b9a, #283593);
+      background-attachment: fixed;
       color: white;
+      scroll-behavior: smooth;
     }
     header {
       display: flex;
@@ -20,21 +23,24 @@
       top: 0;
       z-index: 1000;
       box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      backdrop-filter: blur(6px);
     }
     header h1 {
       margin: 0;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
+      font-weight: 600;
       letter-spacing: 1px;
+      color: #ffeb3b;
     }
     nav a {
       margin: 0 15px;
       text-decoration: none;
       color: white;
-      font-weight: bold;
+      font-weight: 500;
       transition: 0.3s;
     }
     nav a:hover {
-      color: #ffeb3b;
+      color: #ff4081;
     }
     section {
       padding: 80px 20px;
@@ -44,25 +50,39 @@
       background: rgba(255,255,255,0.1);
       margin: 20px auto;
       padding: 30px;
-      border-radius: 15px;
-      max-width: 800px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-      backdrop-filter: blur(6px);
+      border-radius: 20px;
+      max-width: 850px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+      backdrop-filter: blur(8px);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.6);
     }
     .profile-pic {
-      width: 150px;
-      height: 150px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       object-fit: cover;
-      border: 4px solid white;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+      border: 5px solid #ffeb3b;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
       margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 1.8rem;
+      color: #ffeb3b;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
     }
     footer {
       text-align: center;
       padding: 20px;
-      background: rgba(0,0,50,0.7);
-      box-shadow: 0 -4px 10px rgba(0,0,0,0.4);
+      background: rgba(0,0,50,0.8);
+      box-shadow: 0 -4px 10px rgba(0,0,0,0.5);
     }
     footer a {
       color: #ffeb3b;
@@ -80,18 +100,18 @@
       <a href="#contact">Contact</a>
     </nav>
   </header>  <section id="home">
-    <div class="card">
+    <div class="card" style="background: linear-gradient(135deg,#2196f3,#3f51b5);">
       <img src="your-photo.jpg" alt="Profile Photo" class="profile-pic">
       <h2>Welcome to My Portfolio</h2>
       <p>CSE B.Tech 3rd Year | 2025</p>
     </div>
   </section>  <section id="about">
-    <div class="card">
+    <div class="card" style="background: linear-gradient(135deg,#9c27b0,#673ab7);">
       <h2>About Me</h2>
       <p>Hello! I am Madduru Siddartha, a Computer Science Engineering student passionate about technology, coding, and building innovative projects. I enjoy solving problems and exploring new tech stacks.</p>
     </div>
   </section>  <section id="skills">
-    <div class="card">
+    <div class="card" style="background: linear-gradient(135deg,#00bcd4,#2196f3);">
       <h2>Skills</h2>
       <p>🔹 C, C++<br>
          🔹 Python<br>
@@ -99,14 +119,14 @@
          🔹 Problem Solving & DSA</p>
     </div>
   </section>  <section id="projects">
-    <div class="card">
+    <div class="card" style="background: linear-gradient(135deg,#ff5722,#e91e63);">
       <h2>Projects</h2>
       <p>🚀 Project 1 – (Add Details Here)<br>
          🚀 Project 2 – (Add Details Here)<br>
          🚀 Project 3 – (Add Details Here)</p>
     </div>
   </section>  <section id="contact">
-    <div class="card">
+    <div class="card" style="background: linear-gradient(135deg,#4caf50,#8bc34a);">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:maddurusiddartha@gmail.com">maddurusiddartha@gmail.com</a></p>
       <p>GitHub: <a href="https://github.com/maddurusiddartha" target="_blank">github.com/maddurusiddartha</a></p>
