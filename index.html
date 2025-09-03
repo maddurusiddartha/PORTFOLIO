@@ -3,91 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Siddartha Portfolio</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Extra glow effect */
+    .glow {
+      box-shadow: 0 0 20px rgba(128, 0, 0, 0.7), 0 0 40px rgba(128, 0, 0, 0.5);
+    }
+    .hover-3d:hover {
+      transform: translateY(-10px) scale(1.05);
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 15px 30px rgba(128, 0, 0, 0.6);
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800 font-[Poppins]">
+<body class="bg-gradient-to-br from-maroon-700 via-maroon-800 to-black text-gray-100 font-[Poppins]">
 
   <!-- Navbar -->
-  <nav class="bg-white shadow-md fixed w-full top-0 left-0 z-10">
+  <nav class="bg-gradient-to-r from-maroon-900 to-black shadow-lg fixed w-full top-0 left-0 z-10">
     <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-indigo-600">MyPortfolio</h1>
-      <ul class="flex space-x-6 text-gray-600">
-        <li><a href="#about" class="hover:text-indigo-600">About</a></li>
-        <li><a href="#skills" class="hover:text-indigo-600">Skills</a></li>
-        <li><a href="#projects" class="hover:text-indigo-600">Projects</a></li>
-        <li><a href="#contact" class="hover:text-indigo-600">Contact</a></li>
+      <h1 class="text-2xl font-bold text-yellow-400 glow">MyPortfolio</h1>
+      <ul class="flex space-x-6 text-gray-200 font-semibold">
+        <li><a href="#about" class="hover:text-yellow-400 transition">About</a></li>
+        <li><a href="#education" class="hover:text-yellow-400 transition">Education</a></li>
+        <li><a href="#skills" class="hover:text-yellow-400 transition">Skills</a></li>
+        <li><a href="#projects" class="hover:text-yellow-400 transition">Projects</a></li>
+        <li><a href="#contact" class="hover:text-yellow-400 transition">Contact</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
-    <h2 class="text-4xl md:text-6xl font-bold">Hi, I'm <span class="text-yellow-300">Siddartha</span></h2>
-    <p class="mt-4 text-lg md:text-xl">B.Tech CSE | Web Developer | Programmer</p>
-    <a href="#projects" class="mt-6 px-6 py-3 bg-yellow-400 text-black rounded-full shadow-md hover:bg-yellow-300">View My Work</a>
+  <section class="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-r from-maroon-800 to-black text-white shadow-2xl">
+    <h2 class="text-4xl md:text-6xl font-bold drop-shadow-2xl">Hi, I'm <span class="text-yellow-400">Madduru Siddartha</span></h2>
+    <p class="mt-4 text-lg md:text-xl drop-shadow-md">B.Tech CSE | Web Developer | Programmer</p>
+    <a href="#projects" class="mt-6 px-8 py-3 bg-yellow-400 text-black rounded-full glow hover-3d">🚀 View My Work</a>
   </section>
 
   <!-- About Section -->
   <section id="about" class="max-w-6xl mx-auto py-20 px-6">
-    <h2 class="text-3xl font-bold text-center mb-6">About Me</h2>
-    <p class="text-center max-w-3xl mx-auto text-gray-600">
+    <h2 class="text-3xl font-bold text-center mb-6 text-yellow-400 glow">About Me</h2>
+    <p class="text-center max-w-3xl mx-auto text-gray-200 bg-gradient-to-r from-maroon-900 to-black p-6 rounded-2xl shadow-xl hover-3d">
       I'm a Computer Science student passionate about coding, building projects, and exploring new technologies. 
       I love creating stylish websites and learning new programming concepts.
     </p>
   </section>
 
+  <!-- Education Section -->
+  <section id="education" class="bg-gradient-to-r from-maroon-900 to-black py-20 px-6">
+    <h2 class="text-3xl font-bold text-center mb-10 text-yellow-400 glow">Education</h2>
+    <div class="max-w-4xl mx-auto space-y-6">
+      <div class="p-6 bg-gradient-to-r from-maroon-800 to-black rounded-2xl shadow-2xl hover-3d">
+        <h3 class="text-xl font-semibold text-yellow-300">B.Tech in Computer Science and Engineering</h3>
+        <p class="text-gray-300">3rd Year (2025)</p>
+        <p class="text-gray-400">College: [Your College Name Here]</p>
+        <p class="text-gray-400">Current Percentage: 75%</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Skills Section -->
-  <section id="skills" class="bg-gray-200 py-20 px-6">
-    <h2 class="text-3xl font-bold text-center mb-10">Skills</h2>
+  <section id="skills" class="py-20 px-6">
+    <h2 class="text-3xl font-bold text-center mb-10 text-yellow-400 glow">Skills</h2>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-      <div class="p-6 bg-white shadow-md rounded-lg text-center font-semibold">HTML</div>
-      <div class="p-6 bg-white shadow-md rounded-lg text-center font-semibold">CSS</div>
-      <div class="p-6 bg-white shadow-md rounded-lg text-center font-semibold">JavaScript</div>
-      <div class="p-6 bg-white shadow-md rounded-lg text-center font-semibold">Java</div>
+      <div class="p-6 bg-gradient-to-r from-maroon-700 to-black rounded-xl text-center font-semibold hover-3d">HTML</div>
+      <div class="p-6 bg-gradient-to-r from-maroon-700 to-black rounded-xl text-center font-semibold hover-3d">CSS</div>
+      <div class="p-6 bg-gradient-to-r from-maroon-700 to-black rounded-xl text-center font-semibold hover-3d">JavaScript</div>
+      <div class="p-6 bg-gradient-to-r from-maroon-700 to-black rounded-xl text-center font-semibold hover-3d">Java</div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="max-w-6xl mx-auto py-20 px-6">
-    <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
+  <section id="projects" class="bg-gradient-to-r from-maroon-900 to-black py-20 px-6">
+    <h2 class="text-3xl font-bold text-center mb-10 text-yellow-400 glow">Projects</h2>
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+      <div class="bg-gradient-to-r from-maroon-800 to-black rounded-2xl overflow-hidden hover-3d">
         <img src="https://via.placeholder.com/400x200" alt="Project 1" class="w-full">
         <div class="p-4">
-          <h3 class="font-bold text-xl">Project 1</h3>
-          <p class="text-gray-600 mt-2">Description of project 1.</p>
+          <h3 class="font-bold text-xl text-yellow-300">Project 1</h3>
+          <p class="text-gray-300 mt-2">Description of project 1.</p>
         </div>
       </div>
-      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+      <div class="bg-gradient-to-r from-maroon-800 to-black rounded-2xl overflow-hidden hover-3d">
         <img src="https://via.placeholder.com/400x200" alt="Project 2" class="w-full">
         <div class="p-4">
-          <h3 class="font-bold text-xl">Project 2</h3>
-          <p class="text-gray-600 mt-2">Description of project 2.</p>
+          <h3 class="font-bold text-xl text-yellow-300">Project 2</h3>
+          <p class="text-gray-300 mt-2">Description of project 2.</p>
         </div>
       </div>
-      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+      <div class="bg-gradient-to-r from-maroon-800 to-black rounded-2xl overflow-hidden hover-3d">
         <img src="https://via.placeholder.com/400x200" alt="Project 3" class="w-full">
         <div class="p-4">
-          <h3 class="font-bold text-xl">Project 3</h3>
-          <p class="text-gray-600 mt-2">Description of project 3.</p>
+          <h3 class="font-bold text-xl text-yellow-300">Project 3</h3>
+          <p class="text-gray-300 mt-2">Description of project 3.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="bg-indigo-600 text-white py-20 px-6">
-    <h2 class="text-3xl font-bold text-center mb-6">Contact Me</h2>
+  <section id="contact" class="bg-gradient-to-r from-black to-maroon-900 text-white py-20 px-6 shadow-inner">
+    <h2 class="text-3xl font-bold text-center mb-6 text-yellow-400 glow">Contact Me</h2>
     <p class="text-center">📧 maddurusiddartha@gmail.com</p>
-    <p class="text-center">🌐 <a href="https://github.com/maddurusiddartha" class="underline">GitHub Profile</a></p>
+    <p class="text-center">🌐 <a href="https://github.com/maddurusiddartha" class="underline hover:text-yellow-300">GitHub Profile</a></p>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-400 py-4 text-center">
+  <footer class="bg-black text-gray-400 py-4 text-center shadow-inner">
     © 2025 Siddartha | All Rights Reserved
   </footer>
 
